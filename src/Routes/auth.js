@@ -61,7 +61,7 @@ router.post('/login', async (req, res) => {
   }
  const { email, password } = req.body;
 
-//   console.log('data is =========== ', req.body);
+  console.log('data is =========== ', req.body);
 
   if (!email?.trim() || !password?.trim()) {
     return res.status(400).json({ msg: "Email and password are required." });
