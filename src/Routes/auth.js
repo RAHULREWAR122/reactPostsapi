@@ -14,7 +14,7 @@ const COOKIE_OPTIONS = {
 // Register route
 router.post('/register', async (req, res) => {
    if(!req.body || req.body === undefined){
-    return res.status(400).json({ msg: "All fields are required." });
+    return res.status(400).json({ msg: "All fields are required. first condations" });
   }
 
    console.log('body data =========== ', req.body);
@@ -61,7 +61,7 @@ router.post('/login', async (req, res) => {
   }
  const { email, password } = req.body;
 
-  console.log('data is =========== ', req.body);
+//   console.log('data is =========== ', req.body);
 
   if (!email?.trim() || !password?.trim()) {
     return res.status(400).json({ msg: "Email and password are required." });
