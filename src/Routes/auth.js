@@ -79,7 +79,7 @@ router.post('/login', async (req, res) => {
 
     res
       .cookie('token', token, COOKIE_OPTIONS)
-      .json({ token, msg: 'Login successful' , user });
+      .json({ token, success: true , user });
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Server error');
